@@ -1,6 +1,7 @@
 import os
 import cv2
 import numpy as np
+from scipy.ndimage.morphology import binary_dilation
 from flask import Flask, request, redirect, url_for
 from werkzeug import secure_filename
 
@@ -14,33 +15,45 @@ def allowed_file(filename):
         return '.' in filename and \
                 filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
 
-@app.route("/", methods=['GET', 'POST'])
+@app.route("/", methods=['POST'])
 def hello():
-    if request.method == 'POST':
-        print("request is post!")
-        file = request.files['file']
-        if file and allowed_file(file.filename):
-            print("request has both a file, and is secure")
-            filename = secure_filename(file.filename)
-            print("file is secured")
-            print("saving file to "+os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'],filename))
-            print("File has been saved")
+    file = request.files['file']
+    if file and allowed_file(file.filename):
+        print("request has both a file, and is secure")
+        filename = secure_filename(file.filename)
+        print("file is secured")
+        print("saving file to "+os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        file.save(os.path.join(app.config['UPLOAD_FOLDER'],filename))
+        print("File has been saved")
 
-    print("Made it past the request with file="+filename)
-    
-    img = cv2.imread('imgs/'+filename);
+        print("Made it past the request with file="+filename)
 
-    hsv_img = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
+        # Read in file name and extract B,G,R, and W channels
+        waldo = cv2.imread('imgs/'+filename)
+        waldo_float = waldo.astype(float)
+        b,g,r = cv2.split(waldo_float)
+        w = waldo_float.mean(2)
 
-    ORANGE_MIN = np.array([0, 160, 120],np.uint8)
-    ORANGE_MAX = np.array([10, 255, 255],np.uint8) 
+        # Create a convolution kernel representing a red and white shirt
+        pattern = np.ones((24,16), float)
+        for i in xrange(2):
+            pattern[i::4] = -1
 
-    mask = cv2.inRange(hsv_img, ORANGE_MIN, ORANGE_MAX)
+        # Convolve with red less white to find Waldo's shirt
+        v = cv2.filter2D(r-w, -1, pattern)
 
-    res = cv2.bitwise_and(hsv_img, hsv_img, mask= mask)
-    cv2.imwrite(filename, res)
-    return "Hello World!"
+        # Create a mask to bring out probable locations of Waldo
+        mask = (v >= v.max()-(v.max()/3))
+        mask = binary_dilation(mask, np.ones((48,24)))
+        waldo -= .8*waldo * ~mask[:,:,None]
+
+        # Overwrite file with resulting file
+        cv2.imwrite(filename, waldo)
+
+        # Return url handle of new image
+        return "imgs/"+filename
+    else:
+        return "Bad filename"
 
 if __name__ == "__main__":
     app.run()
