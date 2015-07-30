@@ -5,7 +5,7 @@ from scipy.ndimage.morphology import binary_dilation
 from flask import Flask, request, redirect, url_for
 from werkzeug import secure_filename
 
-UPLOAD_FOLDER = '/Users/dcadden/dev/python/imgs'
+UPLOAD_FOLDER = '/Users/charleslai/Documents/Programming/other-projects/waldoBot/server/imgs'
 ALLOWED_EXTENSIONS = set(['png', 'jpg'])
 
 app = Flask(__name__)
@@ -17,43 +17,50 @@ def allowed_file(filename):
 
 @app.route("/", methods=['POST'])
 def hello():
-    file = request.files['file']
-    if file and allowed_file(file.filename):
-        print("request has both a file, and is secure")
-        filename = secure_filename(file.filename)
-        print("file is secured")
-        print("saving file to "+os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        file.save(os.path.join(app.config['UPLOAD_FOLDER'],filename))
-        print("File has been saved")
+    try:
+        if request.method == "POST":
+            file = request.files['file']
+            if file and allowed_file(file.filename):
+                print("request has both a file, and is secure")
+                filename = secure_filename(file.filename)
+                print("file is secured")
+                print("saving file to "+os.path.join(app.config['UPLOAD_FOLDER'], filename))
+                file.save(os.path.join(app.config['UPLOAD_FOLDER'],filename))
+                print("File has been saved")
 
-        print("Made it past the request with file="+filename)
+                print("Made it past the request with file="+filename)
 
-        # Read in file name and extract B,G,R, and W channels
-        waldo = cv2.imread('imgs/'+filename)
-        waldo_float = waldo.astype(float)
-        b,g,r = cv2.split(waldo_float)
-        w = waldo_float.mean(2)
+                # Read in file name and extract B,G,R, and W channels
+                waldo = cv2.imread('imgs/'+filename)
+                waldo_float = waldo.astype(float)
+                b,g,r = cv2.split(waldo_float)
+                w = waldo_float.mean(2)
 
-        # Create a convolution kernel representing a red and white shirt
-        pattern = np.ones((24,16), float)
-        for i in xrange(2):
-            pattern[i::4] = -1
+                # Create a convolution kernel representing a red and white shirt
+                pattern = np.ones((24,16), float)
+                for i in xrange(2):
+                    pattern[i::4] = -1
 
-        # Convolve with red less white to find Waldo's shirt
-        v = cv2.filter2D(r-w, -1, pattern)
+                # Convolve with red less white to find Waldo's shirt
+                v = cv2.filter2D(r-w, -1, pattern)
 
-        # Create a mask to bring out probable locations of Waldo
-        mask = (v >= v.max()-(v.max()/3))
-        mask = binary_dilation(mask, np.ones((48,24)))
-        waldo -= .8*waldo * ~mask[:,:,None]
+                # Create a mask to bring out probable locations of Waldo
+                mask = (v >= v.max()-(v.max()/3))
+                mask = binary_dilation(mask, np.ones((48,24)))
+                waldo -= .8*waldo * ~mask[:,:,None]
 
-        # Overwrite file with resulting file
-        cv2.imwrite(filename, waldo)
+                # Overwrite file with resulting file
+                cv2.imwrite(filename, waldo)
 
-        # Return url handle of new image
-        return "imgs/"+filename
-    else:
-        return "Bad filename"
+                # Return url handle of new image
+                return "imgs/"+filename
+            else:
+                return "Bad filename"
+        else:
+            return "Must use sick bars."
+    except Exception, e:
+        print e
+        return e
 
 if __name__ == "__main__":
     app.run()
