@@ -2,13 +2,14 @@ import os
 import cv2
 import numpy as np
 from scipy.ndimage.morphology import binary_dilation
-from flask import Flask, request, redirect, url_for
+from flask import Flask, request, redirect, url_for, send_from_directory
 from werkzeug import secure_filename
 
 UPLOAD_FOLDER = '/Users/charleslai/Documents/Programming/other-projects/waldoBot/server/imgs'
+UPLOAD_FOLDER = '/Users/dcadden/dev/hackny/python/waldoBot/server/imgs'
 ALLOWED_EXTENSIONS = set(['png', 'jpg'])
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 def allowed_file(filename):
@@ -50,10 +51,10 @@ def hello():
                 waldo -= .8*waldo * ~mask[:,:,None]
 
                 # Overwrite file with resulting file
-                cv2.imwrite(filename, waldo)
+                cv2.imwrite('result/'+filename, waldo)
 
                 # Return url handle of new image
-                return "imgs/"+filename
+                return "result/"+filename
             else:
                 return "Bad filename"
         else:
@@ -62,5 +63,9 @@ def hello():
         print e
         return e
 
+@app.route('/result/<path:path>')
+def send_js(path):
+    return send_from_directory('result', path)
+    
 if __name__ == "__main__":
     app.run()
