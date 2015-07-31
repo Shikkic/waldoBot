@@ -41,7 +41,7 @@ def hello():
                 waldo_float = waldo.astype(float)
 
                 # Gaussian Blur to reduce noise
-                waldo_float = cv2.GaussianBlur(waldo_float, (3,3), 0)
+                # waldo_float = cv2.GaussianBlur(waldo_float, (3,3), 0)
                 
                 b,g,r = cv2.split(waldo_float)
                 w = waldo_float.mean(2)
