@@ -39,11 +39,12 @@ def hello():
 
                 # Separate color channels
                 waldo_float = waldo.astype(float)
-                b,g,r = cv2.split(waldo_float)
-                w = waldo_float.mean(2)
 
                 # Gaussian Blur to reduce noise
                 waldo_float = cv2.GaussianBlur(waldo_float, (3,3), 0)
+                
+                b,g,r = cv2.split(waldo_float)
+                w = waldo_float.mean(2)
 
                 # Create a convolution kernel representing a red and white shirt
                 pattern = np.ones((24,16), float)
