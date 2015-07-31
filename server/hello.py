@@ -31,11 +31,19 @@ def hello():
 
                 print("Made it past the request with file="+filename)
 
-                # Read in file name and extract B,G,R, and W channels
+                # Read in file
                 waldo = cv2.imread('imgs/'+filename)
+
+                # Resize 
+                waldo = cv2.resize(waldo, None, fx=.4, fy=.4, interpolation = cv2.INTER_AREA)
+
+                # Separate color channels
                 waldo_float = waldo.astype(float)
                 b,g,r = cv2.split(waldo_float)
                 w = waldo_float.mean(2)
+
+                # Gaussian Blur to reduce noise
+                waldo_float = cv2.GaussianBlur(waldo_float, (3,3), 0)
 
                 # Create a convolution kernel representing a red and white shirt
                 pattern = np.ones((24,16), float)
