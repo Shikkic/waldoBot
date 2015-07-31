@@ -35,7 +35,7 @@ def hello():
                 waldo = cv2.imread('imgs/'+filename)
 
                 # Resize 
-                waldo = cv2.resize(waldo, None, fx=.4, fy=.4, interpolation = cv2.INTER_AREA)
+                waldo = cv2.resize(waldo, None, fx=.2, fy=.2, interpolation = cv2.INTER_AREA)
 
                 # Separate color channels
                 waldo_float = waldo.astype(float)
