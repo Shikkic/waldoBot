@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B90FDCEB1B6A0358003EE3E3 /* rsz_2wheres-waldo-now.png in Resources */ = {isa = PBXBuildFile; fileRef = B90FDCEA1B6A0358003EE3E3 /* rsz_2wheres-waldo-now.png */; };
+		B953687C1B630A3B0036A993 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B953687B1B630A3B0036A993 /* AppDelegate.swift */; };
+		B953687E1B630A3B0036A993 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B953687D1B630A3B0036A993 /* ViewController.swift */; };
+		B95368811B630A3B0036A993 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B953687F1B630A3B0036A993 /* Main.storyboard */; };
+		B95368831B630A3B0036A993 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B95368821B630A3B0036A993 /* Images.xcassets */; };
+		B95368861B630A3B0036A993 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B95368841B630A3B0036A993 /* LaunchScreen.xib */; };
+		B95368921B630A3B0036A993 /* waldo_botTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95368911B630A3B0036A993 /* waldo_botTests.swift */; };
+		B953689C1B644E3E0036A993 /* Pokemon GB Japan HR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B953689B1B644E3E0036A993 /* Pokemon GB Japan HR.ttf */; };
+		B953689E1B644ED40036A993 /* Pokemon GB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B953689D1B644ED40036A993 /* Pokemon GB.ttf */; };
+		B95368A01B64503C0036A993 /* intro.gif in Resources */ = {isa = PBXBuildFile; fileRef = B953689F1B64503C0036A993 /* intro.gif */; };
+		B9A21BC41B6BF6040026CC91 /* waldO.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9A21BC31B6BF6040026CC91 /* waldO.jpg */; };
+		E83A98741B64BA2E73F02906 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9796FE64062D5689CB4884A2 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B953688C1B630A3B0036A993 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B953686E1B630A3B0036A993 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B95368751B630A3B0036A993;
+			remoteInfo = "waldo bot";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0693417753BC52C056A62BFB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		29523974AAE3F3698EC5C7DA /* Pods-waldo bot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-waldo bot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-waldo bot/Pods-waldo bot.debug.xcconfig"; sourceTree = "<group>"; };
+		81132088434CE256340007FE /* Pods-waldo bot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-waldo bot.release.xcconfig"; path = "Pods/Target Support Files/Pods-waldo bot/Pods-waldo bot.release.xcconfig"; sourceTree = "<group>"; };
+		8EFCD34F0DF889B4D9D4A607 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9796FE64062D5689CB4884A2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B90FDCEA1B6A0358003EE3E3 /* rsz_2wheres-waldo-now.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rsz_2wheres-waldo-now.png"; sourceTree = "<group>"; };
+		B95368761B630A3B0036A993 /* waldo bot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "waldo bot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B953687A1B630A3B0036A993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B953687B1B630A3B0036A993 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B953687D1B630A3B0036A993 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B95368801B630A3B0036A993 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B95368821B630A3B0036A993 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B95368851B630A3B0036A993 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		B953688B1B630A3B0036A993 /* waldo botTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "waldo botTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B95368901B630A3B0036A993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B95368911B630A3B0036A993 /* waldo_botTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = waldo_botTests.swift; sourceTree = "<group>"; };
+		B953689B1B644E3E0036A993 /* Pokemon GB Japan HR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon GB Japan HR.ttf"; sourceTree = "<group>"; };
+		B953689D1B644ED40036A993 /* Pokemon GB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon GB.ttf"; sourceTree = "<group>"; };
+		B953689F1B64503C0036A993 /* intro.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = intro.gif; sourceTree = "<group>"; };
+		B9A21BC31B6BF6040026CC91 /* waldO.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = waldO.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B95368731B630A3B0036A993 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E83A98741B64BA2E73F02906 /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B95368881B630A3B0036A993 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		427FE4E6FD8C174A4FA233DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9796FE64062D5689CB4884A2 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7CE5E18529084AF35198F473 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				29523974AAE3F3698EC5C7DA /* Pods-waldo bot.debug.xcconfig */,
+				81132088434CE256340007FE /* Pods-waldo bot.release.xcconfig */,
+				0693417753BC52C056A62BFB /* Pods.debug.xcconfig */,
+				8EFCD34F0DF889B4D9D4A607 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B953686D1B630A3B0036A993 = {
+			isa = PBXGroup;
+			children = (
+				B95368781B630A3B0036A993 /* waldo bot */,
+				B953688E1B630A3B0036A993 /* waldo botTests */,
+				B95368771B630A3B0036A993 /* Products */,
+				B953689B1B644E3E0036A993 /* Pokemon GB Japan HR.ttf */,
+				B953689D1B644ED40036A993 /* Pokemon GB.ttf */,
+				B953689F1B64503C0036A993 /* intro.gif */,
+				B9A21BC31B6BF6040026CC91 /* waldO.jpg */,
+				B90FDCEA1B6A0358003EE3E3 /* rsz_2wheres-waldo-now.png */,
+				7CE5E18529084AF35198F473 /* Pods */,
+				427FE4E6FD8C174A4FA233DD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B95368771B630A3B0036A993 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B95368761B630A3B0036A993 /* waldo bot.app */,
+				B953688B1B630A3B0036A993 /* waldo botTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B95368781B630A3B0036A993 /* waldo bot */ = {
+			isa = PBXGroup;
+			children = (
+				B953687B1B630A3B0036A993 /* AppDelegate.swift */,
+				B953687D1B630A3B0036A993 /* ViewController.swift */,
+				B953687F1B630A3B0036A993 /* Main.storyboard */,
+				B95368821B630A3B0036A993 /* Images.xcassets */,
+				B95368841B630A3B0036A993 /* LaunchScreen.xib */,
+				B95368791B630A3B0036A993 /* Supporting Files */,
+			);
+			path = "waldo bot";
+			sourceTree = "<group>";
+		};
+		B95368791B630A3B0036A993 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B953687A1B630A3B0036A993 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B953688E1B630A3B0036A993 /* waldo botTests */ = {
+			isa = PBXGroup;
+			children = (
+				B95368911B630A3B0036A993 /* waldo_botTests.swift */,
+				B953688F1B630A3B0036A993 /* Supporting Files */,
+			);
+			path = "waldo botTests";
+			sourceTree = "<group>";
+		};
+		B953688F1B630A3B0036A993 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B95368901B630A3B0036A993 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B95368751B630A3B0036A993 /* waldo bot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B95368951B630A3B0036A993 /* Build configuration list for PBXNativeTarget "waldo bot" */;
+			buildPhases = (
+				A5E0E689AA6EE445EFAABDE6 /* Check Pods Manifest.lock */,
+				B95368721B630A3B0036A993 /* Sources */,
+				B95368731B630A3B0036A993 /* Frameworks */,
+				B95368741B630A3B0036A993 /* Resources */,
+				960DAF22ECB9EA759DD68856 /* Embed Pods Frameworks */,
+				92E0B4068C4F8D8F2115014F /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "waldo bot";
+			productName = "waldo bot";
+			productReference = B95368761B630A3B0036A993 /* waldo bot.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B953688A1B630A3B0036A993 /* waldo botTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B95368981B630A3B0036A993 /* Build configuration list for PBXNativeTarget "waldo botTests" */;
+			buildPhases = (
+				B95368871B630A3B0036A993 /* Sources */,
+				B95368881B630A3B0036A993 /* Frameworks */,
+				B95368891B630A3B0036A993 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B953688D1B630A3B0036A993 /* PBXTargetDependency */,
+			);
+			name = "waldo botTests";
+			productName = "waldo botTests";
+			productReference = B953688B1B630A3B0036A993 /* waldo botTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B953686E1B630A3B0036A993 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = shikkic;
+				TargetAttributes = {
+					B95368751B630A3B0036A993 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					B953688A1B630A3B0036A993 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = B95368751B630A3B0036A993;
+					};
+				};
+			};
+			buildConfigurationList = B95368711B630A3B0036A993 /* Build configuration list for PBXProject "waldo bot" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B953686D1B630A3B0036A993;
+			productRefGroup = B95368771B630A3B0036A993 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B95368751B630A3B0036A993 /* waldo bot */,
+				B953688A1B630A3B0036A993 /* waldo botTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B95368741B630A3B0036A993 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B95368811B630A3B0036A993 /* Main.storyboard in Resources */,
+				B953689C1B644E3E0036A993 /* Pokemon GB Japan HR.ttf in Resources */,
+				B953689E1B644ED40036A993 /* Pokemon GB.ttf in Resources */,
+				B95368861B630A3B0036A993 /* LaunchScreen.xib in Resources */,
+				B95368831B630A3B0036A993 /* Images.xcassets in Resources */,
+				B95368A01B64503C0036A993 /* intro.gif in Resources */,
+				B90FDCEB1B6A0358003EE3E3 /* rsz_2wheres-waldo-now.png in Resources */,
+				B9A21BC41B6BF6040026CC91 /* waldO.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B95368891B630A3B0036A993 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		92E0B4068C4F8D8F2115014F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		960DAF22ECB9EA759DD68856 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5E0E689AA6EE445EFAABDE6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B95368721B630A3B0036A993 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B953687E1B630A3B0036A993 /* ViewController.swift in Sources */,
+				B953687C1B630A3B0036A993 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B95368871B630A3B0036A993 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B95368921B630A3B0036A993 /* waldo_botTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B953688D1B630A3B0036A993 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B95368751B630A3B0036A993 /* waldo bot */;
+			targetProxy = B953688C1B630A3B0036A993 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B953687F1B630A3B0036A993 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B95368801B630A3B0036A993 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B95368841B630A3B0036A993 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B95368851B630A3B0036A993 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B95368931B630A3B0036A993 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B95368941B630A3B0036A993 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B95368961B630A3B0036A993 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0693417753BC52C056A62BFB /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "waldo bot/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shikkic.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B95368971B630A3B0036A993 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EFCD34F0DF889B4D9D4A607 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "waldo bot/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shikkic.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B95368991B630A3B0036A993 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "waldo botTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shikkic.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/waldo bot.app/waldo bot";
+			};
+			name = Debug;
+		};
+		B953689A1B630A3B0036A993 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "waldo botTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shikkic.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/waldo bot.app/waldo bot";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B95368711B630A3B0036A993 /* Build configuration list for PBXProject "waldo bot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B95368931B630A3B0036A993 /* Debug */,
+				B95368941B630A3B0036A993 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B95368951B630A3B0036A993 /* Build configuration list for PBXNativeTarget "waldo bot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B95368961B630A3B0036A993 /* Debug */,
+				B95368971B630A3B0036A993 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B95368981B630A3B0036A993 /* Build configuration list for PBXNativeTarget "waldo botTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B95368991B630A3B0036A993 /* Debug */,
+				B953689A1B630A3B0036A993 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B953686E1B630A3B0036A993 /* Project object */;
+}
